@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "文件标签浏览器",
+  "version": "2.0.0",
+  "identifier": "com.filetag.browser",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "title": "文件标签浏览器",
+        "decorations": true,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/icon.png"],
+    "category": "Productivity",
+    "shortDescription": "本地文件标签管理工具",
+    "longDescription": "本地文件标签管理工具，仅在本地运行，支持为文件和文件夹打标签、检索、同步。"
+  }
+}
